@@ -8,6 +8,7 @@
             <th>번호</th>
             <th>이메일</th>
             <th>문의내용</th>
+            <th>날짜</th>
             <th>삭제</th>
          </tr>
 
@@ -18,7 +19,8 @@
                 <td><%=item.name%></td>
                 <td><%=item.phone%></td>
                 <td><%=item.email%></td>
-                <td><%=item.memo%></td>
+                <td><%-item.memo.replaceAll("\n","<br>")%></td>
+                <td><%=item.redgate%></td>
                 <td> <a href="/contactDelete?idx=<%=item.idx%>">삭제</a></td>
              </tr>
 
